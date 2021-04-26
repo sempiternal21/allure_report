@@ -69,7 +69,7 @@ public class SimpleTest {
         driver.findElement(By.id("LoginForm__username")).sendKeys("tester");
         driver.findElement(By.id("LoginForm__password")).sendKeys("12,4-xyw");
         driver.findElement(By.id("LoginForm_save")).click();
-        assertFalse(driver.findElements(By.linkText("Pobierz plik")).isEmpty());
+        assertTrue(driver.findElements(By.linkText("Pobierz plik")).isEmpty());
     }
 
     @Step(value = "Fill in login with {0}")
